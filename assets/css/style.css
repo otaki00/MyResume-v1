@@ -1,0 +1,412 @@
+html{
+    --mainColor: rgb(16, 15, 15);
+    --subColor:  rgb(196, 22, 65);
+    --mainTextColor: white;
+    --subTextColor: gray;
+    --small : 1.1rem;
+    --medium : 1.5rem;
+    --large : 2.2rem;
+    --verySmall: 1rem;
+    -mainFontFamily: 'Varela Round', sans-serif;
+    --subFontFamily: 'Source Code Pro', monospace;
+}
+
+*{
+    scroll-behavior: smooth;
+}
+
+.navbar{
+    background-color: var(--mainColor);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+nav i{
+    color: var(--subColor);
+}
+
+a:hover{
+    color: var(--subTextColor);
+}
+
+a::selection{
+    color: var(--subColor);
+}
+
+.logo{
+    font-size: var(--large);
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--subColor);
+    font-family: var(--subFontFamily);
+}
+
+.logo:hover{
+    color: var(--subColor);
+}
+
+
+.nav-item{
+    margin-right: auto;
+}
+
+.nav-content{
+    flex-direction: row-reverse;
+    font-size: var(--medium);
+}
+
+.nav-item {
+    margin-right: 30px;
+
+}
+
+.nav-link{
+    color: var(--mainTextColor);
+}
+
+.nav-link:hover{
+    color: var(--subTextColor);
+}
+
+header{
+    width: 100%;
+    height: 100vh;
+    background:linear-gradient(184deg, rgba(0, 0, 0, 0.9) 0%, rgba(0,0,0,.9) 100%), url("../images/bg-header1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+}
+
+
+header .container{
+    height: 100%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--mainTextColor);
+}
+
+header h1{
+    font-size: var(--large);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: var(--subFontFamily);
+}
+
+
+header p{
+    font-size: var(--medium);
+    font-weight: 500;
+    font-family: var(--mainFontFamily);
+    margin: 3rem auto;
+    width: 50%;
+    text-transform: capitalize;
+}
+
+@media screen and (max-width: 768px){
+    header p{
+        width: 100%;
+        font-size: var(--small);
+    }
+    header h1{
+        font-size: var(--medium);
+    }
+}
+
+.special{
+    color: var(--subColor);
+}
+
+#resume{
+    background-color: var(--mainColor);
+    color: var(--mainTextColor);
+    padding: 5rem 0;
+}
+
+#resume .container{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+}
+
+#resume img{
+    background: linear-gradient(184deg, rgba(0, 0, 0, 0.9) 0%, rgba(0,0,0,.9) 100%);
+    width: 180px;
+    height: 210px;
+    border-radius: 50%;
+    margin-bottom: 2rem;
+}
+
+#resume h2{
+    font-size: var(--large);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: var(--subFontFamily);
+    margin-bottom: 1rem;
+}
+
+#resume .about-content{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid var(--subColor);
+    padding: 2rem;
+    margin-bottom: 2rem;
+
+}
+
+#resume .about-content .about-items p{
+    width: 80%;
+    color: var(--subTextColor);
+    font-size: var(--small);
+    font-weight: 400;
+    font-family: var(--mainFontFamily);
+    text-transform: capitalize;
+    /* margin: 1rem 0; */
+}
+
+#resume .about-content .about-items ul{
+    width: 100%;
+    color: var(--mainTextColor);
+    font-size: var(--small);
+    font-weight: 400;
+    font-family: var(--mainFontFamily);
+    text-transform: uppercase;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    /* margin: 1rem 0; */
+}
+
+#resume .about-content .about-items ul li{
+    width: 50%;
+    margin: 0.5rem 0;
+}
+
+#resume .about-content .about-items ul li a{
+    text-decoration: none;
+    color: var(--mainTextColor);
+}
+
+#resume .about-content .about-items ul li i{
+    margin-right: 0.5rem;
+    color: var(--subColor);
+}
+
+@media screen and (max-width: 768px){
+    #resume img{
+        margin: 3rem;
+    }
+    #resume .about{
+        text-align: center;
+        font-size: 0.6rem;
+    }
+    #resume .about-content{
+        flex-direction: column;
+    }
+    #resume .about-content .about-items p{
+        width: 100%;
+    }
+    #resume .about-content .about-items ul{
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size:1rem;
+    }
+
+    #resume .about-content .about-items ul li{
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+}
+
+#knowledge{
+    background-color: var(--mainColor);
+    color: var(--mainTextColor);
+    padding: 5rem 0;
+}
+
+#knowledge .container{
+    width: 80%;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    align-items: center;
+    /* text-align: center; */
+}
+
+@media screen and (max-width: 768px){
+    #knowledge .container{
+        flex-direction: column;
+    }
+}
+
+#knowledge .exp-item{
+    border: 1px solid var(--subColor);
+    padding: 2rem ;
+    margin-bottom: 2rem;
+    width: 100%;
+
+}
+
+#knowledge .exp-item h4{
+    font-size:1rem;
+    color: var(--subColor);
+    font-weight: 600;
+}
+
+#knowledge .exp-item h4 span{
+    color: var(--subTextColor);
+}
+
+#knowledge .exp-item h3{
+    font-size: var(--small);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: var(--subFontFamily);
+    margin-bottom: 1rem;
+}
+
+#knowledge .exp-item p{
+    width: 100%;
+    /* color: var(--subTextColor); */
+    font-size: var(--verySmall);
+    font-weight: 400;
+    font-family: var(--mainFontFamily);
+    text-transform: capitalize;
+    /* margin: 1rem 0; */
+}
+
+#skills{
+    width: 100%;
+    background-color: var(--mainColor);
+    color: var(--mainTextColor);
+    padding: 5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#skills h2{
+    font-size: var(--large);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: var(--subFontFamily);
+    margin-bottom: 3rem;
+}
+
+#skills .container{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    row-gap: 2.5rem;
+}
+
+#skills .container .cir-progress{
+    margin: auto;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: conic-gradient(var(--subColor) 210deg, rgb(23, 23, 23) 0deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#skills .container .cir-progress::after{
+    content: "";
+    position: absolute;
+    width: 85%;
+    height: 85%;
+    border-radius: 50%;
+    background-color: var(--mainColor);
+}
+
+#skills .container .value{
+    position: relative;
+    color: var(--mainTextColor);
+    z-index: 5;
+}
+
+#skills .container .prog-item .text{
+    font-size: var(--small);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: var(--subFontFamily);
+    margin: 1.5rem;
+}
+
+footer{
+    width: 100%;
+    background-color: var(--mainColor);
+    color: var(--mainTextColor);
+    padding: 5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer h2{
+    font-size: var(--large);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: var(--subFontFamily);
+    margin-bottom: 3rem;
+}
+
+footer .container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 2.5rem;
+
+}
+
+footer .container .contact-item{
+    width: 40%;
+    margin-bottom: 3rem;
+    margin: auto;
+    text-align: center;
+    font-size: var(--medium);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: var(--subFontFamily);
+    border: 1px solid var(--subColor);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+footer .container .contact-item a{
+    text-decoration: none;
+    color: var(--mainTextColor);
+}
+
+footer .container .contact-item i{
+    margin-right: 0.5rem;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
